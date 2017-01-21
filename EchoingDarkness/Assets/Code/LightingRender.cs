@@ -9,6 +9,8 @@ public class LightingRender : MonoBehaviour {
     protected RenderTexture target;
     protected Camera camComponent;
     public ScreenOverlay overlay;
+    public Color TargetColor;
+    public float ColorTime = 5f;
     // Use this for initialization
     void Start () {
         camComponent = GetComponent<Camera>();
@@ -18,6 +20,7 @@ public class LightingRender : MonoBehaviour {
         target.name = "TextureFromCamera_" + gameObject.name;
         target.Create();
         camComponent.targetTexture = target;
+        TargetColor = camComponent.backgroundColor;
     }
 	
 	// Update is called once per frame
@@ -33,7 +36,10 @@ public class LightingRender : MonoBehaviour {
             target.Create();
             camComponent.targetTexture = target;
         }
-
+        if(camComponent.backgroundColor != TargetColor)
+        {
+            camComponent.backgroundColor = Color.Lerp(camComponent.backgroundColor, TargetColor, Time.deltaTime * ColorTime);
+        }
         if (overlay != null)
         {
             overlay.texture = target;

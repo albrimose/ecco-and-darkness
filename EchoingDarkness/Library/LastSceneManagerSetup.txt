@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AaronScene.unity
+- path: Assets/Sound Test Scene.unity
   isLoaded: 1
   isActive: 1

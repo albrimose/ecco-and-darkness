@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightTrigger : MonoBehaviour {
-    public LightingRender LightRenderer;
-    public Color LightColor;
+public class BoulderTrap : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,9 +16,10 @@ public class LightTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            LightRenderer.TargetColor = LightColor;
+            Debug.Log("trap active");
+            //TODO: launch boulder
         }
     }
 }

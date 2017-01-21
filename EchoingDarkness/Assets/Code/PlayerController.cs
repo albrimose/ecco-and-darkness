@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour {
 
         if(EchoLight != null)
         {
+            if(Input.GetButtonDown("Echo"))
+            {
+
+            }
             if(Input.GetButton("Echo"))
             {
                 if (EchoLight.transform.localScale.x < MaxEcho)

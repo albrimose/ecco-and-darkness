@@ -46,9 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Code\Boulder.cs" />
+     <Compile Include="Assets\Code\BoulderTrap.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />
+     <Compile Include="Assets\Code\SonarRing.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

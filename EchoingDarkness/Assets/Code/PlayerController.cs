@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
         
         if(DashTimeTil > 0f)
         {
+            Debug.Log(DashTimeTil);
             DashTimeTil -= Time.deltaTime;
         }
         rb.AddForce(movement * speed * Time.deltaTime);

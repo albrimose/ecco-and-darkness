@@ -40,10 +40,15 @@ public class PlayerController : MonoBehaviour {
 
         if(EchoLight != null)
         {
+			AudioSource audio = GetComponent<AudioSource>();
             if(Input.GetButtonDown("Echo"))
             {
-
+				audio.Play();
             }
+			if(Input.GetButtonUp("Echo"))
+			{
+				audio.Stop();
+			}
             if(Input.GetButton("Echo"))
             {
                 if (EchoLight.transform.localScale.x < MaxEcho)

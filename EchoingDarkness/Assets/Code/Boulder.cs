@@ -6,9 +6,15 @@ public class Boulder : MonoBehaviour {
     protected bool TrapActive = false;
     protected Rigidbody2D rb;
     public float FallSpeed = 2f;
+    protected Vector3 InitPos;
+    void Awake()
+    {
+
+    }
     // Use this for initialization
     void Start () {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        InitPos = transform.position;
     }
 	
 	// Update is called once per frame
@@ -18,7 +24,12 @@ public class Boulder : MonoBehaviour {
             rb.AddForce(new Vector3(0f, -FallSpeed, 0f));
         }
 	}
-
+    public void Reset()
+    {
+        TrapActive = false;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX;
+        transform.position = InitPos;
+    }
     public void Drop()
     {
         TrapActive = true;
@@ -32,7 +43,7 @@ public class Boulder : MonoBehaviour {
             if (col.gameObject.tag == "Player")
             {
                 Debug.Log("Death!");
-                //TODO: Kill Player.
+                CheckPointManager.Instance.RestoreLastCheckPoint();
             }
         }
     }

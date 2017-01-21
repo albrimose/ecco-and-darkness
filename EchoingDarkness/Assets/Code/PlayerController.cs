@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed;
 
+    public delegate void MyDelegate();
+    public event MyDelegate onDeath;
+    
+
     private Rigidbody2D rb;
     public GameObject EchoLight;
     public float EchoSpeed = 20f;
@@ -13,11 +17,37 @@ public class PlayerController : MonoBehaviour {
     protected float DashTimeTil = 0f;
     public float EchoRetract = 5f;
     public float MaxEcho = 20f;
+    public Vector3 SavedPosition;
+
+    void Awake()
+    {
+        CheckPointManager.Instance.onRestore += OnRestore;
+        CheckPointManager.Instance.onCheckPoint += OnCheckpoint;
+    }
+
+    void OnRestore()
+    {
+        transform.position = SavedPosition;
+    }
+    void OnCheckpoint()
+    {
+        SavedPosition = transform.position;
+    }
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
+        SavedPosition = transform.position;
     }
 	
+    public void Death()
+    {
+        if(onDeath != null)
+        {
+            onDeath.Invoke();
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
         float moveHorizontal = Input.GetAxis("Horizontal");

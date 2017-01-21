@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Code\Boulder.cs" />
      <Compile Include="Assets\Code\BoulderTrap.cs" />
+     <Compile Include="Assets\Code\CheckPoint.cs" />
+     <Compile Include="Assets\Code\CheckPointManager.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />

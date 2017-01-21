@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BoulderTrap : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Boulder boulder;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,8 +20,8 @@ public class BoulderTrap : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("trap active");
-            //TODO: launch boulder
+            boulder.Drop();
+            Destroy(gameObject);
         }
     }
 }

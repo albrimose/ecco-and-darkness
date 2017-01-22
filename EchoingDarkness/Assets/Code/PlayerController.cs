@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     void OnRestore()
     {
         transform.position = SavedPosition;
+        rb.velocity = Vector3.zero;
     }
     void OnCheckpoint()
     {

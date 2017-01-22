@@ -50,10 +50,13 @@
      <Compile Include="Assets\Code\BoulderTrap.cs" />
      <Compile Include="Assets\Code\CheckPoint.cs" />
      <Compile Include="Assets\Code\CheckPointManager.cs" />
+     <Compile Include="Assets\Code\JetStream.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />
      <Compile Include="Assets\Code\SonarRing.cs" />
+     <Compile Include="Assets\DeathTouch.cs" />
+     <Compile Include="Assets\DisableJetStream.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

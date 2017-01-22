@@ -53,11 +53,13 @@
      <Compile Include="Assets\Code\DeathTouch.cs" />
      <Compile Include="Assets\Code\DisableJetStream.cs" />
      <Compile Include="Assets\Code\DoorController.cs" />
+     <Compile Include="Assets\Code\EnableGameObjects.cs" />
      <Compile Include="Assets\Code\Hitem.cs" />
      <Compile Include="Assets\Code\JetStream.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
      <Compile Include="Assets\Code\MosterMovement.cs" />
+     <Compile Include="Assets\Code\MusicTrigger.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />
      <Compile Include="Assets\Code\SonarRing.cs" />
      <Compile Include="Assets\Code\SwitchControls.cs" />
@@ -138,6 +140,9 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -152,6 +157,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

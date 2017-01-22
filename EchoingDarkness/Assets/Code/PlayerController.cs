@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed;
 
-    public delegate void MyDelegate();
-    public event MyDelegate onDeath;
     
 
     private Rigidbody2D rb;
@@ -21,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 
     void Awake()
     {
+
         CheckPointManager.Instance.onRestore += OnRestore;
         CheckPointManager.Instance.onCheckPoint += OnCheckpoint;
     }
@@ -40,13 +39,13 @@ public class PlayerController : MonoBehaviour {
         SavedPosition = transform.position;
     }
 	
-    public void Death()
-    {
-        if(onDeath != null)
-        {
-            onDeath.Invoke();
-        }
-    }
+    //public void Death()
+    //{
+    //    if(onDeath != null)
+    //    {
+    //        onDeath.Invoke();
+    //    }
+    //}
 
 	// Update is called once per frame
 	void Update () {

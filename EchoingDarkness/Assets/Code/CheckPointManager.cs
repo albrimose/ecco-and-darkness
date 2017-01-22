@@ -2,24 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPointManager : MonoBehaviour {
+public class CheckPointManager {
     public delegate void MyDelegate();
-    public static CheckPointManager Instance;
+    public static CheckPointManager _Instance = null;
+    public static CheckPointManager Instance { get
+        {
+            if(_Instance == null)
+            {
+                _Instance = new CheckPointManager();
+            }
+            return _Instance;
+        }
+    }
     public event MyDelegate onRestore;
     public event MyDelegate onCheckPoint;
     
-    void Awake()
-    {
-        if(Instance == null)
-        {
-            Instance = this;
-        }
-        else if(Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+    //void Awake()
+    //{
+    //    if (_Instance == null)
+    //    {
+    //        _Instance = this;
+    //    }
+    //    else if (_Instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     public void CheckPoint()
     {
@@ -38,12 +47,15 @@ public class CheckPointManager : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-		
-	}
+ //   void Start () {
+
+ //   }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	//// Update is called once per frame
+	//void Update () {
+	//	if(Instance != null)
+ //       {
+ //           Debug.Log("instance");
+ //       }
+	//}
 }

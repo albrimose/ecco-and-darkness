@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boulder : MonoBehaviour {
+    public float FallSpeed = 2f;
+    public float LethalVelocity = 5f;
     protected bool TrapActive = false;
     protected Rigidbody2D rb;
-    public float FallSpeed = 2f;
-    public float lethalVelocity = 3f;
     protected Vector3 InitPos;
     void Awake()
     {
@@ -42,7 +42,7 @@ public class Boulder : MonoBehaviour {
         if (TrapActive)
         { 
             
-            if (col.gameObject.tag == "Player" && rb.velocity.magnitude > lethalVelocity)
+            if (col.gameObject.tag == "Player" && rb.velocity.magnitude > LethalVelocity)
             {
                 Debug.Log("Death!");
                 CheckPointManager.Instance.RestoreLastCheckPoint();

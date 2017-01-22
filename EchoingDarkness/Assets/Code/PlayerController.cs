@@ -56,6 +56,15 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        if(moveHorizontal < 0f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+            
+        }
+        else
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
 
         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0f);
 		if (Input.GetButton ("Dash") && DashTimeTil <= 0f) {

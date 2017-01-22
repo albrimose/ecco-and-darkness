@@ -5,8 +5,8 @@ using UnityEngine;
 public class SwitchControls : MonoBehaviour {
 
     public float SwitchActivationTime = 2f;
-    public Color SwitchInactiveColor = Color.cyan;
-    public Color SwitchActiveColor = Color.magenta;
+    public Sprite SwitchInactiveSprite;
+    public Sprite SwitchActiveSprite;
     protected float TimeActive = 0f;
 
 	// Use this for initialization
@@ -27,12 +27,14 @@ public class SwitchControls : MonoBehaviour {
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
         if (TimeActive > 0f)
         {
-            sr.color = SwitchActiveColor;
+            //sr.color = SwitchActiveColor;
+            sr.sprite = SwitchActiveSprite;
             TimeActive -= Time.deltaTime;
         }
         else
         {
-            sr.color = SwitchInactiveColor;
+            sr.sprite = SwitchInactiveSprite;
+            //sr.color = SwitchInactiveColor;
         }
         
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Boulder : MonoBehaviour {
     public float FallSpeed = 2f;
     public float LethalVelocity = 5f;
+	public AudioSource audio;
+	public AudioClip[] BoulderSounds;
     protected bool TrapActive = false;
     protected Rigidbody2D rb;
     protected Vector3 InitPos;
@@ -39,9 +41,14 @@ public class Boulder : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+		if (!audio.isPlaying) 
+		{
+			audio.clip = BoulderSounds [Random.Range (0, BoulderSounds.Length)];
+			audio.Play ();
+		}
         if (TrapActive)
         { 
-            
+			
             if (col.gameObject.tag == "Player" && rb.velocity.magnitude > LethalVelocity)
             {
                 Debug.Log("Death!");

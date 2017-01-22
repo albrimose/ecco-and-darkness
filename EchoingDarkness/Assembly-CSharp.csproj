@@ -53,9 +53,11 @@
      <Compile Include="Assets\Code\DeathTouch.cs" />
      <Compile Include="Assets\Code\DisableJetStream.cs" />
      <Compile Include="Assets\Code\DoorController.cs" />
+     <Compile Include="Assets\Code\Hitem.cs" />
      <Compile Include="Assets\Code\JetStream.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
+     <Compile Include="Assets\Code\MosterMovement.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />
      <Compile Include="Assets\Code\SonarRing.cs" />
      <Compile Include="Assets\Code\SwitchControls.cs" />

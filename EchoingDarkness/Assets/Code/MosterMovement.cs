@@ -8,6 +8,8 @@ public class MosterMovement : MonoBehaviour
     //check if target is near
     public bool lockontarget;
     //public GameObject Hunted;
+	public AudioSource audio;
+	public AudioClip[] MonsterSounds;
     private Rigidbody2D hunter;
     public float speed = 150f;
     public Transform target;
@@ -30,6 +32,11 @@ public class MosterMovement : MonoBehaviour
         }
 		if (Input.GetButtonDown ("Echo")) 
 		{
+			if (!audio.isPlaying && Random.Range(0,4) == 0) 
+			{
+				audio.clip = MonsterSounds [Random.Range (0, MonsterSounds.Length)];
+				audio.Play ();
+			}
 			speed = 200f;
 		} 
 		else 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed;
 
-    
 
+    public AudioSource MusicAudioSource;
     private Rigidbody2D rb;
     public GameObject EchoLight;
 	public AudioSource audio;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MosterMovement : MonoBehaviour
 {
+    private Vector3  Chekpointposition;
     //check if target is near
     public bool lockontarget;
     //public GameObject Hunted;
@@ -15,6 +16,7 @@ public class MosterMovement : MonoBehaviour
     void Start()
     {
         hunter = GetComponent<Rigidbody2D>();
+        save();
     }
 
     // Update is called once per frame
@@ -28,5 +30,19 @@ public class MosterMovement : MonoBehaviour
         }
         transform.Rotate(0, 0, 1 * Whee * Time.deltaTime, 0);
     }
+    private void Awake()
+    {
+        CheckPointManager.Instance.onCheckPoint += save;
+        CheckPointManager.Instance.onRestore += restore;
+    }
+    void save()
+    {
+        Chekpointposition = transform.position;
+    }
+    void restore()
+    {
+        transform.position = Chekpointposition;
+    }
+
 }
 

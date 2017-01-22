@@ -28,6 +28,14 @@ public class MosterMovement : MonoBehaviour
             direction = direction.normalized;
             hunter.AddForce(direction * speed * Time.deltaTime);
         }
+		if (Input.GetButtonDown ("Echo")) 
+		{
+			speed = 200f;
+		} 
+		else 
+		{
+			speed = 150f;
+		}
         transform.Rotate(0, 0, 1 * Whee * Time.deltaTime, 0);
     }
     private void Awake()

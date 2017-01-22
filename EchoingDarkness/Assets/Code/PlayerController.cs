@@ -118,5 +118,10 @@ public class PlayerController : MonoBehaviour {
                 EchoLight.transform.localScale -= new Vector3(EchoRetract * Time.deltaTime, EchoRetract * Time.deltaTime, EchoRetract * Time.deltaTime);
             }
         }
+
+		if (Input.GetButton ("Reset")) 
+		{
+			Application.LoadLevel (Application.loadedLevel);
+		}
     }
 }

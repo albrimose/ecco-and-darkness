@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\MosterMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\PlayerController.cs">
     <Files>
       <File FileName="Assets\Code\Boulder.cs" Line="44" Column="3" />
-      <File FileName="Assets\Code\MosterMovement.cs" Line="12" Column="35" />
+      <File FileName="Assets\Code\MosterMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Code\DeathTouch.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\PlayerController.cs" Line="123" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

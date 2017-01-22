@@ -6,6 +6,7 @@ public class Boulder : MonoBehaviour {
     protected bool TrapActive = false;
     protected Rigidbody2D rb;
     public float FallSpeed = 2f;
+    public float lethalVelocity = 3f;
     protected Vector3 InitPos;
     void Awake()
     {
@@ -39,8 +40,9 @@ public class Boulder : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
         if (TrapActive)
-        {
-            if (col.gameObject.tag == "Player")
+        { 
+            
+            if (col.gameObject.tag == "Player" && rb.velocity.magnitude > lethalVelocity)
             {
                 Debug.Log("Death!");
                 CheckPointManager.Instance.RestoreLastCheckPoint();

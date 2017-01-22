@@ -10,7 +10,7 @@ public class LightingRender : MonoBehaviour {
     protected Camera camComponent;
     public ScreenOverlay overlay;
     public Color TargetColor;
-    public float ColorTime = 5f;
+    public float ColorSpeed = 5f;
     public Color checkpointBackgroundColor;
     public Color CheckpointTargetColor;
 
@@ -60,7 +60,7 @@ public class LightingRender : MonoBehaviour {
         }
         if(camComponent.backgroundColor != TargetColor)
         {
-            camComponent.backgroundColor = Color.Lerp(camComponent.backgroundColor, TargetColor, Time.deltaTime * ColorTime);
+            camComponent.backgroundColor = Color.Lerp(camComponent.backgroundColor, TargetColor, Time.deltaTime * ColorSpeed);
         }
         if (overlay != null)
         {

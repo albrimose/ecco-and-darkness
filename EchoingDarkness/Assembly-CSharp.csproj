@@ -52,11 +52,13 @@
      <Compile Include="Assets\Code\CheckPointManager.cs" />
      <Compile Include="Assets\Code\DeathTouch.cs" />
      <Compile Include="Assets\Code\DisableJetStream.cs" />
+     <Compile Include="Assets\Code\DoorController.cs" />
      <Compile Include="Assets\Code\JetStream.cs" />
      <Compile Include="Assets\Code\LightTrigger.cs" />
      <Compile Include="Assets\Code\LightingRender.cs" />
      <Compile Include="Assets\Code\PlayerController.cs" />
      <Compile Include="Assets\Code\SonarRing.cs" />
+     <Compile Include="Assets\Code\SwitchControls.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
